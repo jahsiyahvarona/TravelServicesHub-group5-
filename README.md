@@ -1,5 +1,3 @@
-# TravelServicesHub-group5-
-
 ## Travel Services Hub
 
 > A comprehensive platform for travelers to find and book customized travel packages provided by expert travel agents.
