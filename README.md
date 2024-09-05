@@ -1,6 +1,5 @@
-## Travel Services Hub
-
-> A comprehensive platform for travelers to find and book customized travel packages provided by expert travel agents.
+## Title
+> TSH (Travel Services Hub)
 
 ## Team Members
 > Jahsiyah Varona, Saniyah Khan, Shaka Ombongi
