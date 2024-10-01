@@ -1,0 +1,19 @@
+.card.card-ghost {
+  box-shadow: none;
+}
+
+.card.card-ghost {
+  box-shadow: none;
+}
+
+body, html {
+  min-height: 100vh;
+}
+
+.carousel-indicators > li[data-bs-target]::marker {
+  font-size: 0;
+}
+
+.card.card-ghost {
+  box-shadow: none;
+}
