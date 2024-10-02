@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Manage Packages Page">
+        <title>Manage Packages · Provider Dashboard</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../static/CSS/dashboard.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Sidebar -->
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="position-sticky pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="manageBookings.html">Manage Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="managePackages.html">Manage Packages</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Manage Packages</h1>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPackageModal" style="background-color: #0abf53;">Create New Package</button>
+            </div>
+            <!-- List of Packages -->
+            <div class="row">
+                <!-- Example Package Card -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="../../../static/images/A%20serene%20beach%20scene%20with%20a%20travelers%20enjoying%20the%20view,.jpg" class="card-img-top" alt="Package Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Beach Escape</h5>
+                            <p class="card-text">Enjoy a 7-day relaxing vacation at a luxury beach resort.</p>
+                            <p><strong>Price:</strong> $2500</p>
+                            <p><strong>Provider:</strong> John Doe</p>
+                            <p><strong>Likes:</strong> 240 | <strong>Dislikes:</strong> 15</p>
+                            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editPackageModal" style="background-color: #0abf53;">Edit</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more packages -->
+            </div>
+        </main>
+        <!-- Modal for Creating a New Package -->
+        <div class="modal fade" id="createPackageModal" tabindex="-1" aria-labelledby="createPackageModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createPackageModalLabel">Create New Package</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="createPackageForm">
+                            <div class="mb-3">
+                                <label for="packageName" class="form-label">Package Name</label>
+                                <input type="text" class="form-control" id="packageName" placeholder="Enter package name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="packageDescription" class="form-label">Package Description</label>
+                                <textarea class="form-control" id="packageDescription" rows="3" placeholder="Enter package description" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="packagePrice" class="form-label">Price</label>
+                                <input type="number" class="form-control" id="packagePrice" placeholder="Enter price" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="packageImage" class="form-label">Upload Package Image</label>
+                                <input type="file" class="form-control" id="packageImage" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="background-color: #0abf53;">Create Package</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for Editing a Package -->
+        <div class="modal fade" id="editPackageModal" tabindex="-1" aria-labelledby="editPackageModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editPackageModalLabel">Edit Package</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #89d89c;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editPackageForm">
+                            <div class="mb-3">
+                                <label for="editPackageName" class="form-label">Package Name</label>
+                                <input type="text" class="form-control" id="editPackageName" placeholder="Enter package name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editPackageDescription" class="form-label">Package Description</label>
+                                <textarea class="form-control" id="editPackageDescription" rows="3" placeholder="Enter package description"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editPackagePrice" class="form-label">Price</label>
+                                <input type="number" class="form-control" id="editPackagePrice" placeholder="Enter price">
+                            </div>
+                            <div class="mb-3">
+                                <label for="editPackageImage" class="form-label">Upload Package Image</label>
+                                <input type="file" class="form-control" id="editPackageImage">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Script to handle form submissions -->
+        <script>
+        // Handle package creation
+        document.getElementById('createPackageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Package created successfully!');
+            var createPackageModal = bootstrap.Modal.getInstance(document.getElementById('createPackageModal'));
+            createPackageModal.hide();
+        });
+
+        // Handle package editing
+        document.getElementById('editPackageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var packageName = document.getElementById("editPackageName").value;
+            var packageDescription = document.getElementById("editPackageDescription").value;
+            var packagePrice = document.getElementById("editPackagePrice").value;
+            var packageImage = document.getElementById("editPackageImage").files.length;
+
+            if (packageName || packageDescription || packagePrice || packageImage) {
+                alert("Package updated successfully!");
+                var editPackageModal = bootstrap.Modal.getInstance(document.getElementById('editPackageModal'));
+                editPackageModal.hide();
+            } else {
+                alert("Please update at least one field before submitting.");
+            }
+        });
+    </script>
+    </body>
+</html>
