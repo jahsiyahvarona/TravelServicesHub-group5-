@@ -1,4 +1,4 @@
-<html lang="en" data-pg-require="pinekit_theme/pinekit.css, assets/js/theme.min.js, assets/vendor/bootstrap-icons/font/bootstrap-icons.css, assets/vendor/bootstrap-icons/font/fonts/bootstrap-icons.woff, assets/vendor/bootstrap-icons/font/fonts/bootstrap-icons.woff2" data-pgc-master="master.html" style="background-color: #212529;">
+<html lang="en" data-pg-require="pinekit_theme/pinekit.css, assets/js/theme.min.js, assets/vendor/bootstrap-icons/font/bootstrap-icons.css, assets/vendor/bootstrap-icons/font/fonts/bootstrap-icons.woff, assets/vendor/bootstrap-icons/font/fonts/bootstrap-icons.woff2" data-pgc-master="master.html" style="background-color: #212529; border-top-left-radius: 0px;">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +35,7 @@
                     <!-- Content -->
                     <div class="container content-space-t-1 content-space-b-2 d-flex justify-content-center align-items-center flex-column" style="padding-left: 0px; margin-left: 117px;">
                         <div class="mx-lg-auto" style="max-width: 55rem;">
-                            <div class="d-flex justify-content-center align-items-center flex-column min-vh-lg-100" style="margin-left: -100px; margin-right: -51px; padding: 0px 168px 80px 0px; margin-top: 0px; border-top-left-radius: 19px; border-top-right-radius: 0px;">
+                            <div class="d-flex justify-content-center align-items-center flex-column min-vh-lg-100" style="margin-left: -100px; margin-right: -51px; padding: 0px 168px 80px 0px; margin-top: 0px; border-radius: 19px;">
                                 <!-- ========== HEADER ========== -->
                                 <header id="header" class="navbar navbar-height navbar-light mb-3">
                                     <div class="container"><a class="navbar-brand mx-auto" href="./index.html" aria-label="Pinekit" style="padding-top: 0px; margin-bottom: -39px;"> <img class="navbar-brand-logo w-25" src="../../../static/images/logo.png" alt="Image Description"> </a>
@@ -85,7 +85,7 @@ document.getElementById('providerLoginForm').addEventListener('submit', function
     var form = event.target;
     var isValid = true;
     
-    // Check for standard HTML5 validation
+    // Check for standard HTML5 validation first
     if (!form.checkValidity()) {
         event.stopPropagation();
         form.classList.add('was-validated');  // Add Bootstrap validation class
@@ -93,11 +93,12 @@ document.getElementById('providerLoginForm').addEventListener('submit', function
     }
 
     if (isValid) {
-        // Redirect to the provider dashboard if the form is valid
-        window.location.href = "../../../templates/frontendCode/ProviderUI/dashboard.html";
+        // Simulate a login attempt or call an API
+        alert("Provider login successful!");
+        // You can submit the form here if needed, or handle the login with AJAX
+        form.submit();
     }
 });
-
 </script>
                                                 </div>                                                 
                                             </div>

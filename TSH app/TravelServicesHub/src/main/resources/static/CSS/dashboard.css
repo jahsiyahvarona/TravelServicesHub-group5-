@@ -99,21 +99,14 @@ body {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
 
-/* Hover effect for outline buttons */
+/* Adding primary color to button borders */
+.btn-outline-secondary {
+    border-color: #0abf53;
+    color: #0abf53;
+}
+
 .btn-outline-secondary:hover {
     background-color: #0abf53;
     color: white;
 }
 
-/* Make modal links green */
-a[data-bs-toggle="modal"] {
-    color: #0abf53;
-
-    /* The hex color code for green */
-    text-decoration: none;
-}
-
-/* Optionally, add hover effect for modal links */
-a[data-bs-toggle="modal"]:hover {
-    text-decoration: underline;
-}

@@ -1,4 +1,4 @@
-<html lang="en" data-pg-require="pinekit_theme/pinekit.css, assets/js/theme.min.js, assets/vendor/bootstrap-icons/font/bootstrap-icons.css, assets/vendor/bootstrap-icons/font/fonts/bootstrap-icons.woff, assets/vendor/bootstrap-icons/font/fonts/bootstrap-icons.woff2" data-pgc-master="master.html" style="background-color: #212529;">
+<html lang="en" data-pg-require="pinekit_theme/pinekit.css, assets/js/theme.min.js, assets/vendor/bootstrap-icons/font/bootstrap-icons.css, assets/vendor/bootstrap-icons/font/fonts/bootstrap-icons.woff, assets/vendor/bootstrap-icons/font/fonts/bootstrap-icons.woff2" data-pgc-master="master.html">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="./pinekit_theme/pinekit.css">
         <link rel="stylesheet" href="master_style.css">
     </head>
-    <body style="background-color: #212428;">
+    <body>
         <header style="text-align: center;">
             <!-- Header Content -->
         </header>
@@ -27,6 +27,9 @@
                 <!-- End Header -->
                 <div class="w-lg-75 mx-auto">
                     <!-- Card -->
+                    <div class="card card-shadow mx-auto" style="max-width: 700px;">
+                        <!-- Card Content -->
+                    </div>
                     <!-- End Card -->
                 </div>
             </div>
@@ -35,19 +38,20 @@
                     <!-- Content -->
                     <div class="container content-space-t-1 content-space-b-2 d-flex justify-content-center align-items-center flex-column" style="padding-left: 0px; margin-left: 117px;">
                         <div class="mx-lg-auto" style="max-width: 55rem;">
-                            <div class="d-flex justify-content-center align-items-center flex-column min-vh-lg-100" style="margin-left: -100px; margin-right: -51px; padding: 0px 168px 80px 0px; margin-top: 0px; border-top-left-radius: 19px; border-top-right-radius: 0px;">
+                            <div class="d-flex justify-content-center align-items-center flex-column min-vh-lg-100" style="margin-left: -100px; margin-right: -51px; padding: 0px 168px 80px 0px; margin-top: 0px; border-top-left-radius: 0px;">
                                 <!-- ========== HEADER ========== -->
                                 <header id="header" class="navbar navbar-height navbar-light mb-3">
-                                    <div class="container"><a class="navbar-brand mx-auto" href="./index.html" aria-label="Pinekit" style="padding-top: 0px; margin-bottom: -39px;"> <img class="navbar-brand-logo w-25" src="../../../static/images/logo.png" alt="Image Description"> </a>
+                                    <div class="container">
+                                        <a class="navbar-brand mx-auto" href="./index.html" aria-label="Pinekit" style="padding-top: 0px; margin-bottom: -39px;"> <img class="navbar-brand-logo w-25" src="../../../static/images/logo.png" alt="Image Description"> </a>
                                     </div>
                                 </header>
                                 <!-- ========== END HEADER ========== -->
                                 <div class="position-relative">
                                     <!-- Card -->
                                     <div class="card card-shadow card-login mx-auto" style="max-width: 700px;">
-                                        <div class="row" style="border-radius: 20px;">
-                                            <div class="col-md-8" style="border-radius: 0px;">
-                                                <div class="card-body" style="border-radius: 0px;">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="card-body" style="border-radius: 20px;">
                                                     <!-- Form -->
                                                     <form class="js-validate needs-validation" id="providerLoginForm" novalidate="">
                                                         <div class="text-center">
@@ -59,8 +63,7 @@
                                                         <div class="row">
                                                             <div class="col-sm-6">
                                                                 <div class="mb-4">
-                                                                    <input type="text" class="form-control form-control-lg" name="username" id="providerUsernameField" placeholder="Username" aria-label="Username" required="">
-                                                                    <span class="invalid-feedback">Please enter your username.</span>
+                                                                    <input type="text" class="form-control form-control-lg" name="username" id="providerUsernameField" placeholder="Username" aria-label="Username" required=""><span class="invalid-feedback">Please enter your username.</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -68,8 +71,7 @@
                                                         <div class="row">
                                                             <div class="col-sm-6">
                                                                 <div class="mb-4">
-                                                                    <input type="password" class="form-control form-control-lg" name="password" id="providerPasswordField" placeholder="Password" aria-label="Password" required="">
-                                                                    <span class="invalid-feedback">Please enter your password.</span>
+                                                                    <input type="password" class="form-control form-control-lg" name="password" id="providerPasswordField" placeholder="Password" aria-label="Password" required=""><span class="invalid-feedback">Please enter your password.</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -85,7 +87,7 @@ document.getElementById('providerLoginForm').addEventListener('submit', function
     var form = event.target;
     var isValid = true;
     
-    // Check for standard HTML5 validation
+    // Check for standard HTML5 validation first
     if (!form.checkValidity()) {
         event.stopPropagation();
         form.classList.add('was-validated');  // Add Bootstrap validation class
@@ -93,19 +95,21 @@ document.getElementById('providerLoginForm').addEventListener('submit', function
     }
 
     if (isValid) {
-        // Redirect to the provider dashboard if the form is valid
-        window.location.href = "../../../templates/frontendCode/ProviderUI/dashboard.html";
+        // Simulate a login attempt or call an API
+        alert("Provider login successful!");
+        // You can submit the form here if needed, or handle the login with AJAX
+        form.submit();
     }
 });
-
 </script>
                                                 </div>                                                 
                                             </div>
                                             <!-- Right Side Section -->
-                                            <div class="bg-soft-primary col-md-4 d-md-flex flex-column justify-content-center p-8 p-md-5 placeholder-glow" style="background-color: #0abf53; background-image: url('../../../static/images/An%20airplane%20flying%20over%20the%20horizon,%20representing%20the%20ease%20and%20accessibility%20of%20travel%20through%20the%20p%20(1).jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-left: 0px; padding-right: 0px; margin: -1px 0px -1px -11px; border-radius: 0 6px 6px 0px;">
+                                            <div class="bg-soft-primary col-md-4 d-md-flex flex-column justify-content-center p-8 p-md-5 placeholder-glow" style="background-color: #0abf53; background-image: url('../../../static/images/An%20airplane%20flying%20over%20the%20horizon,%20representing%20the%20ease%20and%20accessibility%20of%20travel%20through%20the%20p%20(1).jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-left: 0px; padding-right: 0px; margin: -1px 8px -1px -11px; border-radius: 0 5px 5px 0px;">
                                                 <h5 class="mb-4" style="color: #ffffff; font-size: -3px; margin-left: -26px; padding-left: 6px; padding-right: 0px; margin-right: -37px;">Build unforgettable travel experiences for your customers</h5>
                                                 <ul class="list-checked list-checked-primary list-py-2">
-</ul><span class="d-block"></span>
+</ul>
+                                                <span class="d-block"></span>
                                             </div>                                             
                                         </div>
                                     </div>
