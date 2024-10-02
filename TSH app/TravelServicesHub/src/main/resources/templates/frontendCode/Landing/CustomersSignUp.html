@@ -41,8 +41,7 @@
                             <div class="d-flex justify-content-center align-items-center flex-column min-vh-lg-100" style="margin-left: -100px; margin-right: -51px; padding: 0px 168px 80px 0px; margin-top: 0px; border-top-left-radius: 0px;">
                                 <!-- ========== HEADER ========== -->
                                 <header id="header" class="navbar navbar-height navbar-light mb-3">
-                                    <div class="container">
-                                        <a class="navbar-brand mx-auto" href="./index.html" aria-label="Pinekit" style="padding-top: 0px; margin-bottom: -39px;"> <img class="navbar-brand-logo w-25" src="../../../static/images/logo.png" alt="Image Description"> </a>
+                                    <div class="container"><a class="navbar-brand mx-auto" href="./index.html" aria-label="Pinekit" style="padding-top: 0px; margin-bottom: -39px;"> <img class="navbar-brand-logo w-25" src="../../../static/images/logo.png" alt="Image Description"> </a>
                                     </div>
                                 </header>
                                 <!-- ========== END HEADER ========== -->
@@ -63,44 +62,36 @@
                                                         <div class="row">
                                                             <div class="col-sm-6">
                                                                 <div class="mb-4">
-                                                                    <input type="text" class="form-control form-control-lg" name="username" id="username" placeholder="Username" aria-label="Username" required="" maxlength="15" oninput="this.value = this.value.slice(0, 15)">
-                                                                    <span class="invalid-feedback">Please enter your username (max 15 characters).</span>
+                                                                    <input type="text" class="form-control form-control-lg" name="username" id="username" placeholder="Username" aria-label="Username" required="" maxlength="15" oninput="this.value = this.value.slice(0, 15)"><span class="invalid-feedback">Please enter your username (max 15 characters).</span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
                                                                 <div class="mb-4">
-                                                                    <input type="text" class="form-control form-control-lg" name="fullName" id="fullName" placeholder="Full Name" aria-label="Full Name" required="" maxlength="50" oninput="this.value = this.value.slice(0, 50)">
-                                                                    <span class="invalid-feedback">Please enter your full name (max 50 characters).</span>
+                                                                    <input type="text" class="form-control form-control-lg" name="fullName" id="fullName" placeholder="Full Name" aria-label="Full Name" required="" maxlength="50" oninput="this.value = this.value.slice(0, 50)"><span class="invalid-feedback">Please enter your full name (max 50 characters).</span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="mb-4">
                                                             <label class="form-label" for="signupEmail">Your email</label>
-                                                            <input type="email" class="form-control form-control-lg" name="email" id="signupEmail" placeholder="ex. FirstLast@site.com" aria-label="FirstLast@site.com" required="">
-                                                            <span class="invalid-feedback">Please enter a valid email address.</span>
+                                                            <input type="email" class="form-control form-control-lg" name="email" id="signupEmail" placeholder="ex. FirstLast@site.com" aria-label="FirstLast@site.com" required=""><span class="invalid-feedback">Please enter a valid email address.</span>
                                                         </div>
                                                         <div class="mb-4">
                                                             <label class="form-label" for="signupPassword">Password</label>
                                                             <div class="input-group-merge">
-                                                                <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupPassword" placeholder="8+ characters required" aria-label="8+ characters required" required="" minlength="8">
-                                                                <a class="input-group-text" href="javascript:;" data-bs-toggle="password"> <i class="bi-eye"></i> </a>
-                                                                <span class="invalid-feedback">Please enter a valid password (minimum 8 characters).</span>
+                                                                <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupPassword" placeholder="8+ characters required" aria-label="8+ characters required" required="" minlength="8"><a class="input-group-text" href="javascript:;" data-bs-toggle="password"> <i class="bi-eye"></i> </a><span class="invalid-feedback">Please enter a valid password (minimum 8 characters).</span>
                                                             </div>
                                                         </div>
                                                         <div class="mb-4">
                                                             <label class="form-label" for="signupConfirmPassword">Confirm password</label>
                                                             <div class="input-group-merge">
-                                                                <input type="password" class="js-toggle-password form-control form-control-lg" name="confirmPassword" id="signupConfirmPassword" placeholder="8+ characters required" aria-label="8+ characters required" required="" minlength="8" oninput="checkPasswordMatch()">
-                                                                <a class="input-group-text" href="javascript:;"> <i class="bi-eye"></i> </a>
-                                                                <span class="invalid-feedback" id="passwordMatchFeedback">Passwords do not match.</span>
+                                                                <input type="password" class="js-toggle-password form-control form-control-lg" name="confirmPassword" id="signupConfirmPassword" placeholder="8+ characters required" aria-label="8+ characters required" required="" minlength="8" oninput="checkPasswordMatch()"><a class="input-group-text" href="javascript:;"> <i class="bi-eye"></i> </a><span class="invalid-feedback" id="passwordMatchFeedback">Passwords do not match.</span>
                                                             </div>
                                                         </div>
                                                         <!-- Form Check -->
                                                         <div class="form-check mb-4">
                                                             <input class="form-check-input" type="checkbox" value="" id="termsCheckbox" required="">
                                                             <label class="form-check-label" for="termsCheckbox">I accept the <a href="#">Terms and Conditions</a>
-                                                            </label>
-                                                            <span class="invalid-feedback">Please accept our Terms and Conditions.</span>
+                                                            </label><span class="invalid-feedback">Please accept our Terms and Conditions.</span>
                                                         </div>
                                                         <div class="d-grid gap-4">
                                                             <button class="btn btn-lg" type="submit" style="background-color: #0abf53; color: white;">Create an account</button>
@@ -197,8 +188,7 @@ function validatePasswords() {
                                                 <ul class="list-checked list-checked-primary list-py-2">
                                                     <li class="list-checked-item" style="color: #0abf53; margin-left: -25px; padding-left: 0px; margin-right: -47px; font-weight: bolder;">Comprehensive Travel Solutions</li>
                                                     <li class="list-checked-item" style="color: #0abf53; font-variant: normal; font-size: 19px; padding-left: 0px; margin-left: -22px; padding-right: 0px; margin-right: -43px; font-weight: bolder;">Effortless Booking Management</li>
-                                                </ul>
-                                                <span class="d-block"></span>
+                                                </ul><span class="d-block"></span>
                                             </div>                                             
                                         </div>
                                     </div>
@@ -227,7 +217,7 @@ function validatePasswords() {
     <title>Signin Template · Bootstrap v5.0</title>
     <!-- Bootstrap core CSS -->
     <link href="../../../../../../css/theme.css" rel="stylesheet" type="text/css">
-    <link href="../../../static/CSS/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../../../../../../bootstrap_theme/bootstrap.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template -->
     <link href="../../../static/CSS/sign-in.css" rel="stylesheet">
 </head>
