@@ -123,10 +123,9 @@ document.getElementById('signupForm').addEventListener('submit', function (event
         document.getElementById("signupConfirmPassword").setCustomValidity(""); // Reset custom validity
     }
 
-    if (isValid) {
-        // You can handle the form submission (AJAX, etc.) or allow the form to submit naturally
-        alert("Form submitted successfully!");
-        form.submit();
+      if (isValid) {
+        // Redirect to the dashboard if the form is valid
+        window.location.href = "../../../templates/frontendCode/CustomerUI/customerDashboard.html";
     }
 });
 
