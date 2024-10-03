@@ -74,11 +74,12 @@
                                                         isValid = false;
                                                     }
 
-                                                    if (isValid) {
-                                                        alert("Login successful!");  // Simulate a login attempt
-                                                        form.submit();  // Handle login or form submission as needed
-                                                    }
-                                                });
+                                               if (isValid) {
+        // Redirect to the provider dashboard if the form is valid
+        window.location.href = "../../../templates/frontendCode/CustomerUI/customerdashboard.html";
+    }
+});
+
                                             </script>
                                         </div>
                                     </div>
